@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using dotnet.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
@@ -43,6 +46,12 @@ namespace dotnet.Controllers
         [HttpDelete]
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id){
             return Ok(await _characterService.DeleteCharacter(id));
+        }
+
+        [HttpPost("Skill")]
+        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> AddCharacterSkill(
+            AddCharacterSkillDto newCharacterSkill){
+            return Ok(await _characterService.AddCharacterSkill(newCharacterSkill));
         }
     }
 }

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "QJzUwGArlFNgEaO8S/IcD5jJlSi+TGzhaKyVeQTzYKM=",
+  "Hash": "nJoE/iKRulkcl738zouhudTttYojjafZc0XAGBe70P0=",
   "Source": "dotnet",
   "BasePath": "_content/dotnet",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
